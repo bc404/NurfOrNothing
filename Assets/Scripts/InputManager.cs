@@ -1,8 +1,9 @@
 /* Chandler, May 30 
-initilized the input manager
+initialized the input manager
 added methods to disable and enable the onfoot actions from the input manager 
 initialized player motor 
 player now moves according to value in player motor 
+initialized jump action to player motor jump function 
 */
 using System.Collections;
 using System.Collections.Generic;
@@ -23,7 +24,7 @@ public class InputManager : MonoBehaviour
         playerInput = new PlayerInput(); 
         onFoot = playerInput.OnFoot; 
         motor = GetComponent<PlayerMotor>(); 
-
+        onFoot.Jump.performed += ctx => motor.Jump(); 
     }
 
     // Update is called once per frame

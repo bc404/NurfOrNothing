@@ -3,6 +3,7 @@ initialized the players character controller
 created method that receives inputs from input manager and applies them to the character controller
 added gravity 
 now detects if player is on ground
+added jump function 
 */ 
 using System.Collections;
 using System.Collections.Generic;
@@ -15,6 +16,7 @@ public class PlayerMotor : MonoBehaviour
     private bool isGrounded; 
     public float speed = 5f; 
     public float gravity = -9.8f; 
+    public float jumpHeight = 1.5f; 
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +44,13 @@ public class PlayerMotor : MonoBehaviour
               playerVelocity.y = -2f; 
         controller.Move(playerVelocity * Time.deltaTime); 
         Debug.Log(playerVelocity.y); 
+    }
+
+    public void Jump() {
+        if (isGrounded)
+        {
+            playerVelocity.y = Mathf.Sqrt(jumpHeight * -3.0f * gravity); 
+        }
     }
 
 }
