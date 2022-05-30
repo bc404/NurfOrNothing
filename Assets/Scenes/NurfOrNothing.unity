@@ -459,6 +459,11 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!20 &222581128 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 6905428448754754741, guid: 0dec82ed1287deb479736e701c7c37ea, type: 3}
+  m_PrefabInstance: {fileID: 6905428448033746183}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &283900252
 GameObject:
   m_ObjectHideFlags: 0
@@ -1256,6 +1261,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d66214d9d4633f4429d265da5cc9c7a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1114087214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114087207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de00f550b57466c4086b13a2c6f9d5f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 222581128}
+  xSensitivity: 30
+  ySensitivity: 30
 --- !u!1 &1485426814
 GameObject:
   m_ObjectHideFlags: 0
