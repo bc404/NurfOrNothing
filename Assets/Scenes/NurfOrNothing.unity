@@ -999,7 +999,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 896528613}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 20, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1249,6 +1249,10 @@ MonoBehaviour:
   speed: 5
   gravity: -9.8
   jumpHeight: 1.5
+  crouching: 0
+  sprinting: 0
+  lerpCrouch: 0
+  crouchTimer: 0
 --- !u!114 &1114087213
 MonoBehaviour:
   m_ObjectHideFlags: 0
