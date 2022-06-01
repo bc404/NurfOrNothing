@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1300,11 +1300,6 @@ MonoBehaviour:
   cam: {fileID: 222581128}
   xSensitivity: 30
   ySensitivity: 30
---- !u!4 &1114087215 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6905428447328053318, guid: 0dec82ed1287deb479736e701c7c37ea, type: 3}
-  m_PrefabInstance: {fileID: 6905428448033746183}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1485426814
 GameObject:
   m_ObjectHideFlags: 0
@@ -1465,7 +1460,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1114087215}
+    m_TransformParent: {fileID: 2123615105}
     m_Modifications:
     - target: {fileID: 5010645991592904564, guid: 983d3c32751ffbf40b05493c52f50da9, type: 3}
       propertyPath: m_Name
@@ -1473,7 +1468,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5010645991593270100, guid: 983d3c32751ffbf40b05493c52f50da9, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5010645991593270100, guid: 983d3c32751ffbf40b05493c52f50da9, type: 3}
       propertyPath: m_LocalScale.x
@@ -1493,7 +1488,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5010645991593270100, guid: 983d3c32751ffbf40b05493c52f50da9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.26999998
+      value: -0.33000004
       objectReference: {fileID: 0}
     - target: {fileID: 5010645991593270100, guid: 983d3c32751ffbf40b05493c52f50da9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1753,6 +1748,11 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!4 &2123615105 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6905428448754754740, guid: 0dec82ed1287deb479736e701c7c37ea, type: 3}
+  m_PrefabInstance: {fileID: 6905428448033746183}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2126634606
 GameObject:
   m_ObjectHideFlags: 0
