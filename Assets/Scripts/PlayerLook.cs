@@ -1,5 +1,7 @@
 /* Chandler, May 30
 added a function that detects camera rotation 
+June 1 
+cursor now isnt visible during play mode 
 */ 
 using System.Collections;
 using System.Collections.Generic;
