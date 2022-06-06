@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -758,7 +758,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &699124230
 MonoBehaviour:
@@ -781,7 +781,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 699124228}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 80d8ae26d85232343903bc3f05b8e122, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -844,7 +844,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 699124228}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.5180063, y: 1.64, z: 5.5}
+  m_LocalPosition: {x: -2.5180063, y: 1.59, z: 5.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -862,6 +862,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d7b8e55f9da68e41b8c41f630fe560a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 7.5
 --- !u!1 &717603417
 GameObject:
   m_ObjectHideFlags: 0
@@ -2279,7 +2280,7 @@ PrefabInstance:
     - target: {fileID: 6038718093555985144, guid: 0dec82ed1287deb479736e701c7c37ea, type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 13400000, guid: c0ea022f8aa586946b539e65ecddac49, type: 2}
+      objectReference: {fileID: 13400000, guid: 80d8ae26d85232343903bc3f05b8e122, type: 2}
     - target: {fileID: 6905428447328053307, guid: 0dec82ed1287deb479736e701c7c37ea, type: 3}
       propertyPath: m_Name
       value: Player
