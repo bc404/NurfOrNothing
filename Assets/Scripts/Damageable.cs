@@ -7,9 +7,10 @@ public class Damageable : MonoBehaviour
    [SerializeField] float maxHealth = 100f;
    float currentHealth; 
 
-    [SerializeField] GameObject hitEffect; 
+    [SerializeField] GameObject hitEffect;
+    
 
-   private void Awake()
+    private void Awake()
    {
        currentHealth = maxHealth; 
    } 
@@ -27,6 +28,7 @@ public class Damageable : MonoBehaviour
    void Die()
    {
        print(name + " was destroyed");
-       Destroy(gameObject); 
-   }
+       Destroy(gameObject);
+        
+    }
 }
