@@ -1,3 +1,7 @@
+/* Chandler, June 7 
+spawns enemy at random position 
+spawns waves of enemies
+*/ 
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

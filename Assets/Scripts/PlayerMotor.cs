@@ -7,6 +7,8 @@ added jump function
 May 31 
 added crouch function 
 added sprint function 
+June 7
+game pauses if enemy collides with player 
 */ 
 using System.Collections;
 using System.Collections.Generic;
@@ -91,6 +93,14 @@ public class PlayerMotor : MonoBehaviour
             speed = 8;
         else
             speed = 5; 
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Time.timeScale = 0;  
+        }
     }
 
 }
