@@ -25,7 +25,8 @@ public class PlayerMotor : MonoBehaviour
     public bool crouching;
     public bool sprinting; 
     public bool lerpCrouch;
-    public float crouchTimer; 
+    public float crouchTimer;
+    public float bumpNumber; 
 
 
     // Start is called before the first frame update
@@ -99,7 +100,14 @@ public class PlayerMotor : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            Time.timeScale = 0;  
+            //Time.timeScale = 0;
+            Debug.Log("Bumped");
+            bumpNumber++; 
+            if (bumpNumber > 2)
+            {
+                Time.timeScale = 0; 
+            }
+
         }
     }
 

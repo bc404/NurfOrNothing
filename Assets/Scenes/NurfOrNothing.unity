@@ -1287,6 +1287,7 @@ MonoBehaviour:
   sprinting: 0
   lerpCrouch: 0
   crouchTimer: 0
+  bumpNumber: 0
 --- !u!114 &1114087213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1322,7 +1323,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1114087207}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: b10717e7a56ba0c4d9291fa34703dbe6, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
