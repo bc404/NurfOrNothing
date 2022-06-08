@@ -39,7 +39,7 @@ public class SpawnManager : MonoBehaviour
     {
         float spawnPosX = Random.Range(-xRange, xRange); 
         float spawnPosZ = Random.Range(minZRange, maxZRange); 
-        Vector3 randomPos = new Vector3(spawnPosX, 1, spawnPosZ); 
+        Vector3 randomPos = new Vector3(spawnPosX, 2, spawnPosZ); 
         return randomPos; 
     }
 
@@ -49,7 +49,11 @@ public class SpawnManager : MonoBehaviour
         {
             Instantiate(enemyPrefab, GenerateSpawnPosition(), enemyPrefab.transform.rotation); 
         }
+
+        
     }
+
+    
 
     
 }
