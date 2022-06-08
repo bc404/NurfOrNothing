@@ -5,6 +5,8 @@ initialized player motor
 player now moves according to value in player motor 
 initialized jump action to player motor jump function 
 player now looks around according to value in player motor 
+June 8 
+added a gun fire coroutine 
 */
 using System.Collections;
 using System.Collections.Generic;
@@ -21,6 +23,8 @@ public class InputManager : MonoBehaviour
 
     [SerializeField] Gun gun; 
 
+    Coroutine fireCoroutine;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -33,7 +37,8 @@ public class InputManager : MonoBehaviour
         onFoot.Jump.performed += ctx => motor.Jump();
         onFoot.Crouch.performed += ctx => motor.Crouch();
         onFoot.Sprint.performed += ctx => motor.Sprint();
-        onFoot.Shoot.performed += _ => gun.Shoot(); 
+        onFoot.Shoot.started += _ => StartFiring(); 
+        onFoot.Shoot.canceled += _ => StopFiring(); 
     }
 
     // Update is called once per frame
@@ -46,6 +51,19 @@ public class InputManager : MonoBehaviour
     private void LateUpdate()
     {
         look.ProcessLook(onFoot.Look.ReadValue<Vector2>()); 
+    }
+
+    void StartFiring()
+    {
+        fireCoroutine = StartCoroutine(gun.RapidFire()); 
+    }
+
+    void StopFiring()
+    {
+        if (fireCoroutine != null)
+        {
+            StopCoroutine(fireCoroutine); 
+        }
     }
 
     private void OnEnable()
