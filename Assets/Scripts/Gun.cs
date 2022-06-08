@@ -4,6 +4,7 @@ can now damage enemy with raycast mouse clicks
 June 8
 added rapid fire option to gun 
 added reload function 
+added concrete hit effect for house colliders 
 */ 
 using System.Collections;
 using System.Collections.Generic;
@@ -27,6 +28,8 @@ public class Gun : MonoBehaviour
     [SerializeField] float reloadTime; 
     WaitForSeconds reloadWait; 
 
+    [SerializeField] GameObject floorHitEffect;
+
     private void Awake()
     {
         cam = Camera.main.transform; 
@@ -44,6 +47,12 @@ public class Gun : MonoBehaviour
             if (hit.collider.GetComponent<Damageable>() != null)
             {
                 hit.collider.GetComponent<Damageable>().TakeDamage(damage, hit.point, hit.normal); 
+            }
+            
+            else if (hit.collider.CompareTag("House") )
+            {
+                Debug.Log("Hit Floor"); 
+                Instantiate(floorHitEffect, hit.point, Quaternion.LookRotation(hit.normal));
             }
         }
     }
