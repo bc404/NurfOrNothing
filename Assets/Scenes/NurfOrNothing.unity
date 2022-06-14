@@ -629,7 +629,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &598366588
 GameObject:
@@ -1313,9 +1313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 710ac46c75db7ae449d6bbde3a3dfc12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 2096492445995351198, guid: 3e489f2823193b749b44f15a3c04591b, type: 3}
-  enemyCount: 0
-  waveNumber: 1
+  enemyPrefab: {fileID: 6058140602746989125, guid: 72fda069194d9e34697380566f5d9dcc, type: 3}
 --- !u!4 &1176455371
 Transform:
   m_ObjectHideFlags: 0
@@ -1958,11 +1956,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!4 &2123615105 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6727115231993417890, guid: 0dec82ed1287deb479736e701c7c37ea, type: 3}
-  m_PrefabInstance: {fileID: 6727115230692088611}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2126634606
 GameObject:
   m_ObjectHideFlags: 0
@@ -2075,71 +2068,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!1001 &1034745527649326460
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1034745527117618310, guid: 21573bdbe87dd4a4c9ce3b156af5fff7, type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1034745527117618310, guid: 21573bdbe87dd4a4c9ce3b156af5fff7, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1034745527117618310, guid: 21573bdbe87dd4a4c9ce3b156af5fff7, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1034745527117618310, guid: 21573bdbe87dd4a4c9ce3b156af5fff7, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 39.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1034745527117618310, guid: 21573bdbe87dd4a4c9ce3b156af5fff7, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1034745527117618310, guid: 21573bdbe87dd4a4c9ce3b156af5fff7, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1034745527117618310, guid: 21573bdbe87dd4a4c9ce3b156af5fff7, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1034745527117618310, guid: 21573bdbe87dd4a4c9ce3b156af5fff7, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1034745527117618310, guid: 21573bdbe87dd4a4c9ce3b156af5fff7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1034745527117618310, guid: 21573bdbe87dd4a4c9ce3b156af5fff7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1034745527117618310, guid: 21573bdbe87dd4a4c9ce3b156af5fff7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1034745527117618313, guid: 21573bdbe87dd4a4c9ce3b156af5fff7, type: 3}
-      propertyPath: m_Name
-      value: Enemy1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1034745527117618313, guid: 21573bdbe87dd4a4c9ce3b156af5fff7, type: 3}
-      propertyPath: m_TagString
-      value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 1034745527117618314, guid: 21573bdbe87dd4a4c9ce3b156af5fff7, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 2123615105}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 21573bdbe87dd4a4c9ce3b156af5fff7, type: 3}
 --- !u!1001 &6727115230692088611
 PrefabInstance:
   m_ObjectHideFlags: 0
