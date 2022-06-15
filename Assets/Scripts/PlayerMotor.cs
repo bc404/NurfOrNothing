@@ -13,6 +13,7 @@ game pauses if enemy collides with player
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMotor : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class PlayerMotor : MonoBehaviour
     public float crouchTimer;
     public float bumpNumber; 
     public float projectileBump; 
+    
 
 
     // Start is called before the first frame update
@@ -99,32 +101,21 @@ public class PlayerMotor : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
-            //Time.timeScale = 0;
-            Debug.Log("Bumped");
-            bumpNumber++; 
-            if (bumpNumber > 2)
-            {
-                Time.timeScale = 0; 
-            }
-
-        }
-
-
         if (collision.gameObject.CompareTag("Projectile"))
         {
             //Time.timeScale = 0;
             projectileBump++; 
-            if (projectileBump > 2)
+            if (projectileBump == 3)
             {
                 Time.timeScale = 0; 
+                print("Game Over"); 
             }
 
         }
-
-
-
     }
 
+
+
+
 }
+
