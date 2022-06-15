@@ -27,6 +27,7 @@ public class PlayerMotor : MonoBehaviour
     public bool lerpCrouch;
     public float crouchTimer;
     public float bumpNumber; 
+    public float projectileBump; 
 
 
     // Start is called before the first frame update
@@ -109,6 +110,21 @@ public class PlayerMotor : MonoBehaviour
             }
 
         }
+
+
+        if (collision.gameObject.CompareTag("Projectile"))
+        {
+            //Time.timeScale = 0;
+            projectileBump++; 
+            if (projectileBump > 2)
+            {
+                Time.timeScale = 0; 
+            }
+
+        }
+
+
+
     }
 
 }
