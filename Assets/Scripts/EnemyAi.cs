@@ -1,3 +1,6 @@
+/* Chandler, June 13
+ created enemy patrol, chase and attack states 
+*/ 
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
