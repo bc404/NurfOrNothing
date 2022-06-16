@@ -14,6 +14,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro; 
 
 public class PlayerMotor : MonoBehaviour
 {
@@ -28,14 +29,19 @@ public class PlayerMotor : MonoBehaviour
     public bool lerpCrouch;
     public float crouchTimer;
     public float bumpNumber; 
-    public float projectileBump; 
-    
+    public float projectileBump;
 
+    private int score;
+    public TextMeshProUGUI scoreText;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        controller = GetComponent<CharacterController>(); 
+        controller = GetComponent<CharacterController>();
+        score = 0;
+        UpdateScore(0);
+        
     }
 
     // Update is called once per frame
@@ -112,6 +118,12 @@ public class PlayerMotor : MonoBehaviour
             }
 
         }
+    }
+
+    public void UpdateScore(int scoreToAdd) 
+    {
+        score += scoreToAdd;
+        scoreText.text = "Score: " + score; 
     }
 
 
