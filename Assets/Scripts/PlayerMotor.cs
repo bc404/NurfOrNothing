@@ -17,6 +17,7 @@ powerup spawns in random location
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI; 
 using UnityEngine.SceneManagement;
 using TMPro; 
 
@@ -40,6 +41,7 @@ public class PlayerMotor : MonoBehaviour
     private int score;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI gameOverText;
+    public Button restartButton; 
 
     
 
@@ -122,7 +124,10 @@ public class PlayerMotor : MonoBehaviour
             projectileBump++; 
             if (projectileBump == 4)
             {
+                Cursor.lockState = CursorLockMode.None; 
+                Cursor.visible = true;
                 gameOverText.gameObject.SetActive(true); 
+                restartButton.gameObject.SetActive(true); 
                 Time.timeScale = 0; 
                 
             }
@@ -135,7 +140,7 @@ public class PlayerMotor : MonoBehaviour
     {
         if (other.CompareTag("Powerup"))
         {
-            
+           
             Destroy(other.gameObject); 
             gun.rapidFire = true; 
             StartCoroutine(PowerupCountdownRoutine()); 
@@ -154,7 +159,13 @@ public class PlayerMotor : MonoBehaviour
         scoreText.text = "Score: " + score; 
     }
 
-
+    public void RestartGame()
+    {
+         Cursor.lockState = CursorLockMode.Locked; 
+        Cursor.visible = false;
+        Time.timeScale = 1; 
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
+    }
 
 
 }
