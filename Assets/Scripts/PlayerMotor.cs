@@ -39,6 +39,7 @@ public class PlayerMotor : MonoBehaviour
 
     private int score;
     public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI gameOverText;
 
     
 
@@ -119,10 +120,11 @@ public class PlayerMotor : MonoBehaviour
         {
             //Time.timeScale = 0;
             projectileBump++; 
-            if (projectileBump == 3)
+            if (projectileBump == 4)
             {
+                gameOverText.gameObject.SetActive(true); 
                 Time.timeScale = 0; 
-                print("Game Over"); 
+                
             }
 
         }
