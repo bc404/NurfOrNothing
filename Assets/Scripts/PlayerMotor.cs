@@ -9,6 +9,10 @@ added crouch function
 added sprint function 
 June 7
 game pauses if enemy collides with player 
+June 16
+game stops if enemy projectile hits player 3 times
+June 17
+
 */ 
 using System.Collections;
 using System.Collections.Generic;
@@ -30,14 +34,18 @@ public class PlayerMotor : MonoBehaviour
     public float crouchTimer;
     public float bumpNumber; 
     public float projectileBump;
+    public bool hasPowerup; 
+    private Gun gun; 
 
     private int score;
     public TextMeshProUGUI scoreText;
+
     
 
     // Start is called before the first frame update
     void Start()
     {
+        gun = GameObject.FindWithTag("Gun").GetComponent<Gun>();
         controller = GetComponent<CharacterController>();
         score = 0;
         UpdateScore(0);
@@ -118,6 +126,24 @@ public class PlayerMotor : MonoBehaviour
             }
 
         }
+        
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Powerup"))
+        {
+            
+            Destroy(other.gameObject); 
+            gun.rapidFire = true; 
+            StartCoroutine(PowerupCountdownRoutine()); 
+        }
+    }
+
+    IEnumerator PowerupCountdownRoutine()
+    {
+        yield return new WaitForSeconds(30);
+        gun.rapidFire = false; 
     }
 
     public void UpdateScore(int scoreToAdd) 

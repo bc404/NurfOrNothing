@@ -14,7 +14,7 @@ public class Gun : MonoBehaviour
 {
     Transform cam; 
 
-    [SerializeField] bool rapidFire = false; 
+    public bool rapidFire = false; 
 
     [SerializeField] float range = 50f; 
     [SerializeField] float damage = 10f; 
