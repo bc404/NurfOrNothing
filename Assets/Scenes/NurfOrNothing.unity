@@ -270,7 +270,7 @@ GameObject:
   - component: {fileID: 120014687}
   - component: {fileID: 120014686}
   - component: {fileID: 120014689}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Wall 6
   m_TagString: House
   m_Icon: {fileID: 0}
@@ -382,7 +382,7 @@ GameObject:
   - component: {fileID: 167520379}
   - component: {fileID: 167520378}
   - component: {fileID: 167520382}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Wall 4
   m_TagString: House
   m_Icon: {fileID: 0}
@@ -494,7 +494,7 @@ GameObject:
   - component: {fileID: 206134652}
   - component: {fileID: 206134651}
   - component: {fileID: 206134654}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Wall 8
   m_TagString: House
   m_Icon: {fileID: 0}
@@ -606,7 +606,7 @@ GameObject:
   - component: {fileID: 283900254}
   - component: {fileID: 283900253}
   - component: {fileID: 283900257}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Wall 1
   m_TagString: House
   m_Icon: {fileID: 0}
@@ -778,7 +778,7 @@ GameObject:
   - component: {fileID: 598366591}
   - component: {fileID: 598366590}
   - component: {fileID: 598366593}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Wall 12
   m_TagString: House
   m_Icon: {fileID: 0}
@@ -890,7 +890,7 @@ GameObject:
   - component: {fileID: 717603419}
   - component: {fileID: 717603418}
   - component: {fileID: 717603422}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Wall 2
   m_TagString: House
   m_Icon: {fileID: 0}
@@ -1002,7 +1002,7 @@ GameObject:
   - component: {fileID: 874217502}
   - component: {fileID: 874217501}
   - component: {fileID: 874217504}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Wall 11
   m_TagString: House
   m_Icon: {fileID: 0}
@@ -1207,7 +1207,7 @@ GameObject:
   - component: {fileID: 1085715013}
   - component: {fileID: 1085715012}
   - component: {fileID: 1085715015}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Wall 10
   m_TagString: House
   m_Icon: {fileID: 0}
@@ -1728,7 +1728,7 @@ GameObject:
   - component: {fileID: 1485426816}
   - component: {fileID: 1485426815}
   - component: {fileID: 1485426819}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Wall 3
   m_TagString: House
   m_Icon: {fileID: 0}
@@ -1836,7 +1836,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1553585118}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: House
   m_TagString: House
   m_Icon: {fileID: 0}
@@ -1883,7 +1883,7 @@ GameObject:
   - component: {fileID: 2077846553}
   - component: {fileID: 2077846552}
   - component: {fileID: 2077846555}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Wall 9
   m_TagString: House
   m_Icon: {fileID: 0}
@@ -1995,7 +1995,7 @@ GameObject:
   - component: {fileID: 2083871556}
   - component: {fileID: 2083871555}
   - component: {fileID: 2083871558}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Wall 5
   m_TagString: House
   m_Icon: {fileID: 0}
@@ -2107,7 +2107,7 @@ GameObject:
   - component: {fileID: 2126634609}
   - component: {fileID: 2126634608}
   - component: {fileID: 2126634611}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Wall 7
   m_TagString: House
   m_Icon: {fileID: 0}
@@ -2213,17 +2213,49 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1788738645308622709, guid: 0dec82ed1287deb479736e701c7c37ea, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788738645308622711, guid: 0dec82ed1287deb479736e701c7c37ea, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788738645308622713, guid: 0dec82ed1287deb479736e701c7c37ea, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1788738645308622713, guid: 0dec82ed1287deb479736e701c7c37ea, type: 3}
       propertyPath: m_TagString
       value: Gun
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788738645308622715, guid: 0dec82ed1287deb479736e701c7c37ea, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788738645308622717, guid: 0dec82ed1287deb479736e701c7c37ea, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788738645308622719, guid: 0dec82ed1287deb479736e701c7c37ea, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6727115230371621857, guid: 0dec82ed1287deb479736e701c7c37ea, type: 3}
       propertyPath: rapidFire
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6727115231048084072, guid: 0dec82ed1287deb479736e701c7c37ea, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6727115231805441028, guid: 0dec82ed1287deb479736e701c7c37ea, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6727115231805441028, guid: 0dec82ed1287deb479736e701c7c37ea, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6727115231805441032, guid: 0dec82ed1287deb479736e701c7c37ea, type: 3}
       propertyPath: m_RootOrder

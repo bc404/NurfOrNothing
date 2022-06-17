@@ -12,7 +12,7 @@ game pauses if enemy collides with player
 June 16
 game stops if enemy projectile hits player 3 times
 June 17
-
+powerup spawns in random location 
 */ 
 using System.Collections;
 using System.Collections.Generic;
