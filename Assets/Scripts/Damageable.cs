@@ -29,6 +29,7 @@ public class Damageable : MonoBehaviour
    {
        Instantiate(hitEffect, hitPos, Quaternion.LookRotation(hitNormal));
        currentHealth -= damage; 
+       print("hit"); 
        if (currentHealth <= 0)
        {
            Die(); 

@@ -9,10 +9,15 @@ added crouch function
 added sprint function 
 June 7
 game pauses if enemy collides with player 
+June 16
+game stops if enemy projectile hits player 3 times
+June 17
+powerup spawns in random location 
 */ 
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI; 
 using UnityEngine.SceneManagement;
 using TMPro; 
 
@@ -30,14 +35,20 @@ public class PlayerMotor : MonoBehaviour
     public float crouchTimer;
     public float bumpNumber; 
     public float projectileBump;
+    public bool hasPowerup; 
+    private Gun gun; 
 
     private int score;
     public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI gameOverText;
+    public Button restartButton; 
+
     
 
     // Start is called before the first frame update
     void Start()
     {
+        gun = GameObject.FindWithTag("Gun").GetComponent<Gun>();
         controller = GetComponent<CharacterController>();
         score = 0;
         UpdateScore(0);
@@ -111,13 +122,35 @@ public class PlayerMotor : MonoBehaviour
         {
             //Time.timeScale = 0;
             projectileBump++; 
-            if (projectileBump == 3)
+            if (projectileBump == 4)
             {
+                Cursor.lockState = CursorLockMode.None; 
+                Cursor.visible = true;
+                gameOverText.gameObject.SetActive(true); 
+                restartButton.gameObject.SetActive(true); 
                 Time.timeScale = 0; 
-                print("Game Over"); 
+                
             }
 
         }
+        
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Powerup"))
+        {
+           
+            Destroy(other.gameObject); 
+            gun.rapidFire = true; 
+            StartCoroutine(PowerupCountdownRoutine()); 
+        }
+    }
+
+    IEnumerator PowerupCountdownRoutine()
+    {
+        yield return new WaitForSeconds(30);
+        gun.rapidFire = false; 
     }
 
     public void UpdateScore(int scoreToAdd) 
@@ -126,7 +159,13 @@ public class PlayerMotor : MonoBehaviour
         scoreText.text = "Score: " + score; 
     }
 
-
+    public void RestartGame()
+    {
+         Cursor.lockState = CursorLockMode.Locked; 
+        Cursor.visible = false;
+        Time.timeScale = 1; 
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
+    }
 
 
 }
